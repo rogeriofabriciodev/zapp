@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Navegator from './components/menu/Navegator'
 import Dashboard from './components/dashboard/Dashboard'
 import PageManufacturer from './components/manufacturer/PageManufacturer'
+import PageProvider from './components/provider/PageProvider'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Switch>
           <Route exact path='/' component={ Dashboard } />
           <Route path='/addManufacturer' component={ PageManufacturer } />
+          <Route path='/addProvider' component={ PageProvider } />
         </Switch>
       </div>
     </BrowserRouter>
