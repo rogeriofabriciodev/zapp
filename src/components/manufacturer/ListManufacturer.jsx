@@ -11,15 +11,15 @@ const ListManufacturer = () => {
       <Table striped bordered hover size="sm">
         <thead>
           <tr>
-            <th>ID</th>
+            {/* <td>Item</td> */}
             <th>Fabricante</th>
           </tr>
         </thead>
         <tbody>
           {manufacturers.map((manufacturer => 
             <tr>
-              <td width="30%" key={manufacturer.id}>{manufacturer.id}</td>
-              <td >{manufacturer.manufacturer}</td>
+              {/* <td>{manufacturers.keys.}</td> */}
+              <td key={manufacturer.id}>{manufacturer.manufacturer}</td>
             </tr>
           ))}
         </tbody>
