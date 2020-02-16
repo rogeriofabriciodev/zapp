@@ -3,13 +3,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Navegator from './components/menu/Navegator'
 import Dashboard from './components/dashboard/Dashboard'
-import NewManufacturer from './components/manufacturer/InsertNewManufacturer'
+import PageManufacturer from './components/manufacturer/PageManufacturer'
 
 function App() {
   return (
     <div className="App">
       <Navegator />
-      <NewManufacturer />
+      <PageManufacturer />
     </div>
   );
 }
