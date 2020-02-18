@@ -6,7 +6,6 @@ import CategoryConsult from '../category/ConsultCategory'
 import SubCategoryConsult from '../subcategory/ConsultSubCategory'
 
 
-
 const InsertNewProduct = () => {
 
   const manufacturers = ManufacturerConsult()
@@ -87,7 +86,7 @@ const InsertNewProduct = () => {
                   required />
               </div>
 
-              <div className="form-group mt-5">
+              <div className="form-group">
                 <input className="form-control" type="number" 
                   value={ productProfitMargin } 
                   onChange={e => setProductProfitMargin(e.currentTarget.value)} 
