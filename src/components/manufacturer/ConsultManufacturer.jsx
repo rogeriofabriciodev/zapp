@@ -27,7 +27,6 @@ function ManufacturerConsult(sortBy = 'NAME_ASC') {
   }, [sortBy])
 
   return manufacturerNames
-
 }
 
 export default ManufacturerConsult

@@ -7,19 +7,25 @@ const ListProduct = () => {
   const products = ConsultProduct(sortBy)
 
   return (
-    <div className="container mt-5">
+    <div className="container mt-5 mb-5">
       <Table striped bordered hover size="sm">
         <thead>
           <tr>
-            {/* <td>Item</td> */}
+            <th>Cod.</th>
             <th>Produto</th>
+            <th>Modelo</th>
+            <th>Marca</th>
+            <th>Descrição</th>
           </tr>
         </thead>
         <tbody>
           {products.map((product => 
             <tr>
-              {/* <td>{manufacturers.keys.}</td> */}
-              <td key={product.id}>{product.productName}</td>
+              <td width="15%" key={product.id}>{product.productCode}</td>
+              <td width="15%">{product.productName}</td>
+              <td width="15%">{product.productModel}</td>
+              <td width="15%">{product.productBrandID}</td>
+              <td width="40%" className="text-left">{product.productDescription}</td>
             </tr>
           ))}
         </tbody>
