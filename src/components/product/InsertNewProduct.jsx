@@ -15,13 +15,13 @@ const InsertNewProduct = () => {
 
   const [ productName, setProductName ] = useState('')
   const [ productModel, setProductModel ] = useState('')
-  const [ productBrandID, setProductBrandID ] = useState('')
-  const [ productProviderID, setProductProviderID ] = useState('')
+  const [ productBrandName, setProductBrandName ] = useState('')
+  const [ productProviderName, setProductProviderName ] = useState('')
   const [ productSerialNumber, setProductSerialNumber ] = useState('')
   const [ productDescription, setProductDescription ] = useState('')
   const [ productProfitMargin, setProductProfitMargin ] = useState('')
-  const [ productCategoryID, setProductCategoryID ] = useState('')
-  const [ productSubcategoryID, setProductSubcategoryID ] = useState('')
+  const [ productCategory, setProductCategory ] = useState('')
+  const [ productSubcategory, setProductSubcategory ] = useState('')
   const [ productCode, setProductCode ] = useState('')
 
 
@@ -34,20 +34,24 @@ const InsertNewProduct = () => {
     .add({
       productName,
       productModel,
-      productBrandID,
-      productProviderID,
+      productBrandName,
+      productProviderName,
       productSerialNumber,
       productDescription,
       productProfitMargin,
+      productCategory,
+      productSubcategory,
       productCode
     }).then(() => {
       setProductName('')
       setProductModel('')
-      setProductBrandID('')
-      setProductProviderID('')
+      setProductBrandName('')
+      setProductProviderName('')
       setProductSerialNumber('')
       setProductDescription('')
       setProductProfitMargin('')
+      setProductCategory('')
+      setProductSubcategory('')
       setProductCode('')
     })
   }
@@ -104,52 +108,52 @@ const InsertNewProduct = () => {
 
               <div className="form-group">
                 <select className="form-control" 
-                  value={ productBrandID } 
-                  onChange={e => setProductBrandID(e.currentTarget.value)} 
+                  value={ productBrandName } 
+                  onChange={e => setProductBrandName(e.currentTarget.value)} 
                   id="validationDefault06" 
                   required>
                   <option selected disabled value="">Fabricantes</option>
                   { manufacturers.map((manufacturer =>
-                    <option key={manufacturer.id} value={manufacturer.id}>{ manufacturer.manufacturer }</option>
+                    <option key={manufacturer.id} value={manufacturer.manufacturer}>{ manufacturer.manufacturer }</option>
                   ))}
                 </select>
               </div>
 
               <div className="form-group">
                 <select className="form-control" 
-                  value={ productProviderID } 
-                  onChange={e => setProductProviderID(e.currentTarget.value)} 
+                  value={ productProviderName } 
+                  onChange={e => setProductProviderName(e.currentTarget.value)} 
                   id="validationDefault07" 
                   required>
                   <option selected disabled value="">Fornecedores</option>
                   { providers.map((provider =>
-                    <option key={provider.id} value={provider.id}>{ provider.provider }</option>
+                    <option key={provider.id} value={provider.provider}>{ provider.provider }</option>
                   ))}
                 </select>
               </div>
 
               <div className="form-group">
                 <select className="form-control" 
-                  value={ productCategoryID } 
-                  onChange={e => setProductCategoryID(e.currentTarget.value)} 
+                  value={ productCategory } 
+                  onChange={e => setProductCategory(e.currentTarget.value)} 
                   id="validationDefault08" 
                   required>
                   <option selected disabled value="">Categorias</option>
                   { categories.map((category =>
-                    <option key={category.id} value={category.id}>{ category.category}</option>
+                    <option key={category.id} value={category.category}>{ category.category}</option>
                   ))}
                 </select>
               </div>
 
               <div className="form-group">
                 <select className="form-control" 
-                  value={ productSubcategoryID } 
-                  onChange={e => setProductSubcategoryID(e.currentTarget.value)} 
+                  value={ productSubcategory } 
+                  onChange={e => setProductSubcategory(e.currentTarget.value)} 
                   id="validationDefault09" 
                   required>
                   <option selected disabled value="">Sub-Categorias</option>
                   { subcategories.map((subcategory =>
-                    <option key={subcategory.id} value={subcategory.id}>{ subcategory.subCategory }</option>
+                    <option key={subcategory.id} value={subcategory.subCategory}>{ subcategory.subCategory }</option>
                   ))}
                 </select>
               </div>

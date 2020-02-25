@@ -6,7 +6,7 @@ const InsertNewSubCategory = () => {
   const categoriesID = CategoryConsult()
 
   const [ subCategory, setSubCategory ] = useState('')
-  const [ categoryID, setCategoryID ] = useState('')
+  const [ category, setCategory ] = useState('')
 
   function submitData(e) {
     e.preventDefault()
@@ -16,11 +16,11 @@ const InsertNewSubCategory = () => {
     .collection('subcategories')
     .add({
       subCategory,
-      categoryID
+      category
     })
     .then(() => {
       setSubCategory('')
-      setCategoryID('')
+      setCategory('')
     }) 
 
   }
@@ -44,13 +44,13 @@ const InsertNewSubCategory = () => {
               
               <div className="form-group">
                 <select className="form-control" 
-                  value={ categoryID } 
-                  onChange={e => setCategoryID(e.currentTarget.value)} 
+                  value={ category } 
+                  onChange={e => setCategory(e.currentTarget.value)} 
                   id="validationDefault09" 
                   required>
                   <option selected disabled value="">Categoria</option>
                   { categoriesID.map((category =>
-                    <option key={category.id} value={category.id}>{ category.category }</option>
+                    <option key={category.id} value={category.category}>{ category.category }</option>
                   ))}
                 </select>
               </div>

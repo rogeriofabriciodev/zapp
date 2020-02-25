@@ -24,7 +24,7 @@ const ListProduct = () => {
               <td width="15%" key={product.id}>{product.productCode}</td>
               <td width="15%">{product.productName}</td>
               <td width="15%">{product.productModel}</td>
-              <td width="15%">{product.productBrandID}</td>
+              <td width="15%">{product.productBrandName}</td>
               <td width="40%" className="text-left">{product.productDescription}</td>
             </tr>
           ))}

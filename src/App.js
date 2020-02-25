@@ -1,6 +1,6 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import './App.css'
+//import './App.css'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Navegator from './components/menu/Navegator'
 import Dashboard from './components/dashboard/Dashboard'
@@ -9,6 +9,8 @@ import PageManufacturer from './components/manufacturer/PageManufacturer'
 import PageProvider from './components/provider/PageProvider'
 import PageCategory from './components/category/PageCategory'
 import PageSubCategory from './components/subcategory/PageSubCategory'
+
+//import ListProd from './components/tests/ListProd'
 
 function App() {
   return (
