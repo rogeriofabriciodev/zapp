@@ -2,18 +2,18 @@ import { useState, useEffect } from 'react'
 import firebase from '../config/FirebaseConfig'
 
 const SORT_OPTIONS = {
-  'NAME_ASC': { column: 'category', direction: 'asc'}
+  'NAME_ASC': { column: 'subCategory', direction: 'asc'}
 }
 
-function SubCategoryConsult(sortBy = 'NAME_ASC') {
+function SubCategoryConsultByCategory(sortBy = 'NAME_ASC') {
   const [ subCategoryNames, setSubCategoryNames ] = useState([])
 
   useEffect(() => {
-    const unsubscribe = firebase
-                        .firestore()
-                        .collection('subcategories')
+    const ref = firebase
+      .firestore().collection('subcategories')
+      .where('category', '==', 'Vídeo')
+    const unsubscribe = ref
                         .orderBy(SORT_OPTIONS[sortBy].column, SORT_OPTIONS[sortBy].direction)
-                        .orderBy('subCategory', 'asc')
                         .onSnapshot((snapshot) => {
                           const newSubCategory = snapshot.docs.map((doc) => ({
                             id: doc.id,
@@ -31,4 +31,4 @@ function SubCategoryConsult(sortBy = 'NAME_ASC') {
 
 }
 
-export default SubCategoryConsult
+export default SubCategoryConsultByCategory

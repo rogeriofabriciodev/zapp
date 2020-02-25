@@ -10,7 +10,7 @@ import PageProvider from './components/provider/PageProvider'
 import PageCategory from './components/category/PageCategory'
 import PageSubCategory from './components/subcategory/PageSubCategory'
 
-//import ListProd from './components/tests/ListProd'
+import Product from './components/product/product'
 
 function App() {
   return (

@@ -11,15 +11,15 @@ const ListSubCategory = () => {
       <Table striped bordered hover size="sm">
         <thead>
           <tr>
-            <th>Sub-Categoria</th>
-            {/* <th>Categoria</th> */}
+            <th className="text-center">Sub-Categoria</th>
+            <th className="text-center">Categoria</th>
           </tr>
         </thead>
         <tbody>
           {subcategories.map((subcategory => 
             <tr>
               <td key={subcategory.id}>{subcategory.subCategory}</td>
-              {/* <td key={subcategory.id}>{subcategory.categoryID}</td> */}
+              <td className="text-center">{subcategory.category}</td>
             </tr>
           ))}
         </tbody>
