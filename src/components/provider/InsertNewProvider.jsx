@@ -3,7 +3,10 @@ import firebase from '../config/FirebaseConfig'
 
 const InsertNewProvider = () => {
 
+  console.log("teste de consumo de dados PROVIDER INSERT 0")
+
   const [provider, setProvider] = useState('')
+
 
   function submitData(e) {
     e.preventDefault()
@@ -17,6 +20,8 @@ const InsertNewProvider = () => {
     .then(() => {
       setProvider('')
     }) 
+
+    console.log("teste de consumo de dados PROVIDER INSERT 1")
 
   }
     
@@ -46,5 +51,5 @@ const InsertNewProvider = () => {
       </div>
     )
   }
-  
+  console.log("teste de consumo de dados PROVIDER INSERT 2")
   export default InsertNewProvider

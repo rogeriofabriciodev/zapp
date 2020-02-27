@@ -3,6 +3,8 @@ import { Table } from 'react-bootstrap'
 import SubCategoryConsult from '../subcategory/ConsultSubCategory'
 
 const ListSubCategory = () => {
+  console.log("teste de consumo de dados SUBCATEGORY LIST 0")
+
   const [sortBy] = useState('NAME_ASC')
   const subcategories = SubCategoryConsult(sortBy)
 
@@ -11,15 +13,15 @@ const ListSubCategory = () => {
       <Table striped bordered hover size="sm">
         <thead>
           <tr>
-            <th>Sub-Categoria</th>
-            {/* <th>Categoria</th> */}
+            <th className="text-center">Sub-Categoria</th>
+            <th className="text-center">Categoria</th>
           </tr>
         </thead>
         <tbody>
           {subcategories.map((subcategory => 
             <tr>
               <td key={subcategory.id}>{subcategory.subCategory}</td>
-              {/* <td key={subcategory.id}>{subcategory.categoryID}</td> */}
+              <td className="text-center">{subcategory.category}</td>
             </tr>
           ))}
         </tbody>
@@ -27,5 +29,5 @@ const ListSubCategory = () => {
     </div>
   )
 }
-
+console.log("teste de consumo de dados SUBCATEGORY LIST 1")
 export default ListSubCategory

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import firebase from '../config/FirebaseConfig'
 
 const InsertNewCategory = () => {
+  console.log("teste de consumo de dados CATEGORY INSERT 0")
 
   const [category, setCategory] = useState('')
 
@@ -17,7 +18,7 @@ const InsertNewCategory = () => {
     .then(() => {
       setCategory('')
     }) 
-
+    console.log("teste de consumo de dados CATEGORY INSERT 1")
   }
     
     return (
@@ -46,5 +47,5 @@ const InsertNewCategory = () => {
       </div>
     )
   }
-  
+  console.log("teste de consumo de dados CATEGORY INSERT 2")
   export default InsertNewCategory
