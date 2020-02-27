@@ -10,8 +10,6 @@ import PageProvider from './components/provider/PageProvider'
 import PageCategory from './components/category/PageCategory'
 import PageSubCategory from './components/subcategory/PageSubCategory'
 
-import Product from './components/product/product'
-
 function App() {
   return (
     <BrowserRouter>

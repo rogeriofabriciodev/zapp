@@ -8,6 +8,8 @@ const SORT_OPTIONS = {
 function ProviderConsult(sortBy = 'NAME_ASC') {
   const [ providerNames, setProviderNames ] = useState([])
 
+  console.log("teste de consumo de dados PROVIDER CONSULT 0")
+
   useEffect(() => {
     const unsubscribe = firebase
                         .firestore()
@@ -23,8 +25,12 @@ function ProviderConsult(sortBy = 'NAME_ASC') {
 
                         })
 
+                        console.log("teste de consumo de dados PROVIDER CONSULT  1")
+
                         return() => unsubscribe()
   }, [sortBy])
+
+  console.log("teste de consumo de dados PROVIDER CONSULT  2")
 
   return providerNames
 

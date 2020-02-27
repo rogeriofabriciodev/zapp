@@ -3,6 +3,7 @@ import { Table } from 'react-bootstrap'
 import ConsultProduct from '../product/ConsultProduct'
 
 const ListProduct = () => {
+  console.log("teste de consumo de dados PRODUCT LIST 0")
   const [sortBy] = useState('NAME_ASC')
   const products = ConsultProduct(sortBy)
 
@@ -33,5 +34,5 @@ const ListProduct = () => {
     </div>
   )
 }
-
+console.log("teste de consumo de dados PRODUCT LIST 1")
 export default ListProduct

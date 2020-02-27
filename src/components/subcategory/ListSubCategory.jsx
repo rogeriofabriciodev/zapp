@@ -3,6 +3,8 @@ import { Table } from 'react-bootstrap'
 import SubCategoryConsult from '../subcategory/ConsultSubCategory'
 
 const ListSubCategory = () => {
+  console.log("teste de consumo de dados SUBCATEGORY LIST 0")
+
   const [sortBy] = useState('NAME_ASC')
   const subcategories = SubCategoryConsult(sortBy)
 
@@ -27,5 +29,5 @@ const ListSubCategory = () => {
     </div>
   )
 }
-
+console.log("teste de consumo de dados SUBCATEGORY LIST 1")
 export default ListSubCategory

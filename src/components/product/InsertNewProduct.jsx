@@ -7,6 +7,7 @@ import SubCategoryConsult from '../subcategory/ConsultSubCategory'
 
 
 const InsertNewProduct = () => {
+  console.log("teste de consumo de dados PRODUCT INSERT 0")
 
   const manufacturers = ManufacturerConsult()
   const providers = ProviderConsult()
@@ -27,7 +28,7 @@ const InsertNewProduct = () => {
 
   function submitData(e) {
     e.preventDefault()
-
+    console.log("teste de consumo de dados PRODUCT INSERT 1")
     firebase
     .firestore()
     .collection('products')
@@ -153,7 +154,7 @@ const InsertNewProduct = () => {
                   required>
                   <option selected disabled value="">Sub-Categorias</option>
                   { subcategories.map((subcategory =>
-                    <option key={subcategory.id} value={subcategory.subCategory}>{ subcategory.subCategory }</option>
+                    <option key={subcategory.id} value={subcategory.subCategory}>{ subcategory.category } - { subcategory.subCategory }</option>
                   ))}
                 </select>
               </div>
@@ -177,5 +178,5 @@ const InsertNewProduct = () => {
       </div>
   )
 }
-
+console.log("teste de consumo de dados PRODUCT INSERT 2")
 export default InsertNewProduct

@@ -3,6 +3,7 @@ import firebase from '../config/FirebaseConfig'
 import CategoryConsult from '../category/ConsultCategory'
 
 const InsertNewSubCategory = () => {
+  console.log("teste de consumo de dados SUBCATEGORY INSERT 0")
   const categoriesID = CategoryConsult()
 
   const [ subCategory, setSubCategory ] = useState('')
@@ -22,7 +23,7 @@ const InsertNewSubCategory = () => {
       setSubCategory('')
       setCategory('')
     }) 
-
+    console.log("teste de consumo de dados SUBCATEGORY INSERT 1")
   }
     
     return (
@@ -64,5 +65,5 @@ const InsertNewSubCategory = () => {
       </div>
     )
   }
-  
+  console.log("teste de consumo de dados SUBCATEGORY INSERT 2")
   export default InsertNewSubCategory

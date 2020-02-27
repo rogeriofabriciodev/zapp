@@ -3,6 +3,8 @@ import { Table } from 'react-bootstrap'
 import ConsultManufacturer from '../manufacturer/ConsultManufacturer'
 
 const ListManufacturer = () => {
+  console.log("teste de consumo de dados MANUFACTURER LIST 0")
+
   const [sortBy] = useState('NAME_ASC')
   const manufacturers = ConsultManufacturer(sortBy)
 
@@ -27,5 +29,6 @@ const ListManufacturer = () => {
     </div>
   )
 }
+console.log("teste de consumo de dados MANUFACTURER LIST 1")
 
 export default ListManufacturer

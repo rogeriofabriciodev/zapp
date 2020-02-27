@@ -3,6 +3,8 @@ import firebase from '../config/FirebaseConfig'
 
 const InsertNewManufacturer = () => {
 
+  console.log("teste de consumo de dados MANUFACTURER INSERT 0")
+
   const [manufacturer, setManufacturer] = useState('')
 
   function submitData(e) {
@@ -17,7 +19,7 @@ const InsertNewManufacturer = () => {
     .then(() => {
       setManufacturer('')
     }) 
-
+    console.log("teste de consumo de dados MANUFACTURER INSERT 1")
   }
     
     return (
@@ -46,5 +48,5 @@ const InsertNewManufacturer = () => {
       </div>
     )
   }
-  
+  console.log("teste de consumo de dados MANUFACTURER INSERT 2")
   export default InsertNewManufacturer
