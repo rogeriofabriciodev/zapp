@@ -10,7 +10,7 @@ const InsertNewCategory = () => {
     e.preventDefault()
 
     firebase
-    .firestore()
+    .db
     .collection('categories')
     .add({
       category

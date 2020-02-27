@@ -11,7 +11,7 @@ const InsertNewManufacturer = () => {
     e.preventDefault()
 
     firebase
-    .firestore()
+    .db
     .collection('manufacturer')
     .add({
       manufacturer

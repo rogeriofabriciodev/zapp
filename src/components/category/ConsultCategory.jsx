@@ -14,7 +14,7 @@ function CategoryConsult(sortBy = 'NAME_ASC') {
 
   useEffect(() => {
     const unsubscribe = firebase
-                        .firestore()
+                        .db
                         .collection('categories')
                         .orderBy(SORT_OPTIONS[sortBy].column, SORT_OPTIONS[sortBy].direction)
                         .onSnapshot((snapshot) => {

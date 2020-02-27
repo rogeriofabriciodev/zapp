@@ -12,7 +12,7 @@ const InsertNewProvider = () => {
     e.preventDefault()
 
     firebase
-    .firestore()
+    .db
     .collection('providers')
     .add({
       provider

@@ -15,7 +15,7 @@ function ManufacturerConsult(sortBy = 'NAME_ASC') {
 
   useEffect(() => {
     const unsubscribe = firebase
-                        .firestore()
+                        .db
                         .collection('manufacturer')
                         .orderBy(SORT_OPTIONS[sortBy].column, SORT_OPTIONS[sortBy].direction)
                         .onSnapshot((snapshot) => {

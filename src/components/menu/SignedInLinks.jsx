@@ -18,7 +18,7 @@ const SignedInLinks = () => {
       </Nav>
       <Nav>
         <Nav.Link >Rogério</Nav.Link>
-        <Nav.Link h>Logout</Nav.Link>
+        <Nav.Link >Logout</Nav.Link>
       </Nav>
     </>
   )

@@ -13,7 +13,7 @@ const InsertNewSubCategory = () => {
     e.preventDefault()
 
     firebase
-    .firestore()
+    .db
     .collection('subcategories')
     .add({
       subCategory,

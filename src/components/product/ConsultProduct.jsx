@@ -14,7 +14,7 @@ function ProductConsult(sortBy = 'NAME_ASC') {
   useEffect(() => {
     console.log("teste de consumo de dados PRODUCT CONSULT 2")
     const unsubscribe = firebase
-                        .firestore()
+                        .db
                         .collection('products')
                         .orderBy(SORT_OPTIONS[sortBy].column, SORT_OPTIONS[sortBy].direction)
                         .onSnapshot((snapshot) => {

@@ -30,7 +30,7 @@ const InsertNewProduct = () => {
     e.preventDefault()
     console.log("teste de consumo de dados PRODUCT INSERT 1")
     firebase
-    .firestore()
+    .db
     .collection('products')
     .add({
       productName,

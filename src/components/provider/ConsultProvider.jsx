@@ -12,7 +12,7 @@ function ProviderConsult(sortBy = 'NAME_ASC') {
 
   useEffect(() => {
     const unsubscribe = firebase
-                        .firestore()
+                        .db
                         .collection('providers')
                         .orderBy(SORT_OPTIONS[sortBy].column, SORT_OPTIONS[sortBy].direction)
                         .onSnapshot((snapshot) => {

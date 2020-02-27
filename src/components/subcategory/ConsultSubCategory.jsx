@@ -14,7 +14,7 @@ function SubCategoryConsult(sortBy = 'NAME_ASC') {
 
   useEffect(() => {
     const unsubscribe = firebase
-                        .firestore()
+                        .db
                         .collection('subcategories')
                         // .where('category', '==', 'Audio')
                         .orderBy(SORT_OPTIONS[sortBy].column, SORT_OPTIONS[sortBy].direction)
